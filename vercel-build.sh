@@ -1,10 +1,6 @@
 #!/bin/bash
 
-# Install dependencies
-npm install --ignore-optional
+set -euo pipefail
 
-# Explicitly install the platform-specific Rollup dependency
-npm install @rollup/rollup-linux-x64-gnu@4.9.5
-
-# Build the project
-npm run build   
+# Vercel installs the locked dependencies before running this script.
+npm run build
